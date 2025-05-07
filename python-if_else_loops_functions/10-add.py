@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 
 def add(a, b):
 	if a == None and b == None:
