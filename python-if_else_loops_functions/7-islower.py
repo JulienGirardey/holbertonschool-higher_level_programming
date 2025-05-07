@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def islower(c):
-    if c == None:
+    if c == None or c == '':
         return None
     if c < chr(97) or c > chr(122):
         return False
