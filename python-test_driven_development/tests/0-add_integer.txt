@@ -18,3 +18,5 @@ Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add_integer(10**100, 2)
 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
+>>> add_integer(-5, -5)
+-10
