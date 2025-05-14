@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-
 """
 add_integer.py
 
 this module add 2 numbers
 """
+
+
 def add_integer(a, b=98):
     """
     that adds 2 integer, transform float in to integer and handle wrong type
