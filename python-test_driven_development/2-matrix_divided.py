@@ -7,19 +7,22 @@ this module divides all elements of a matrix
 
 def matrix_divided(matrix, div):
     """
-    that divides all elements of a matrix
+    Divides all elements of a matrix by a given number, rounded to 2 decimal places.
     """
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
     if not isinstance(matrix, (list)):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     result = []
+    for row_check in matrix:
+        if not isinstance(row_check, (list)):
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        if not len(row_check) == len(matrix[0]):
+            raise TypeError("Each row of the matrix must have the same size")
     for row in matrix:
         new_row = []
-        if not len(row) == len(matrix[0]):
-            raise TypeError("Each row of the matrix must have the same size")
         for elem in row:
             if not isinstance(elem, (int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
