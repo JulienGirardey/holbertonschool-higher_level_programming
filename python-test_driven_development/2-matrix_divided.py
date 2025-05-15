@@ -2,7 +2,7 @@
 """
 matrix_divided.py
 
-this module divides all elements of a matrix
+This module provides a function to divide all elements of a matrix by a given number.
 """
 
 def matrix_divided(matrix, div):
