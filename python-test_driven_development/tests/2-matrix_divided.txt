@@ -29,6 +29,12 @@ Test one empty line matrix:
     >>> matrix_divided([[]], 2)
     [[]]
 
+Test if the matix is change:
+    >>> m = [[1, 2], [3, 4]]
+    >>> _ = matrix_divided(m, 2)
+    >>> m
+    [[1, 2], [3, 4]]
+
 Test row error:
     >>> matrix_divided([[1, 2], [3, 4, 5]], 2)
     Traceback (most recent call last):
