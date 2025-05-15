@@ -6,6 +6,9 @@ this module divides all elements of a matrix
 """
 
 def matrix_divided(matrix, div):
+    """
+    that divides all elements of a matrix
+    """
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (int, float)):
