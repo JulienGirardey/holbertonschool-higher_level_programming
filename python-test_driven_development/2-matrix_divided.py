@@ -29,10 +29,4 @@ def matrix_divided(matrix, div):
         if not len(row_check) == len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
 
-    result = []
-    for row in matrix:
-        new_row = []
-        for elem in row:
-            new_row.append(round(elem / div, 2))
-        result.append(new_row)
-    return result
+    return [[round(num / div, 2) for num in row] for row in matrix]
