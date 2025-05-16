@@ -1,0 +1,44 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Cas normal avec ponctuation
+>>> text_indentation("Bonjour. Je suis: Julien? Oui.")
+Bonjour.
+<BLANKLINE>
+Je suis:
+<BLANKLINE>
+Julien?
+<BLANKLINE>
+Oui.
+<BLANKLINE>
+>>> text_indentation("Salut:  tu vas bien?  Oui.")
+Salut:
+<BLANKLINE>
+tu vas bien?
+<BLANKLINE>
+Oui.
+<BLANKLINE>
+>>> text_indentation("Hello world")
+Hello world
+
+# Cas avec un seul caractère
+>>> text_indentation('a')
+a
+
+# Cas vide
+>>> text_indentation("")
+<BLANKLINE>
+
+# Cas type incorrect (int)
+>>> text_indentation(1)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+# Cas type incorrect (None)
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+# Cas argument manquant
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
