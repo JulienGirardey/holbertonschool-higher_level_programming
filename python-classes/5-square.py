@@ -20,6 +20,8 @@ class Square:
 
     def my_print(self):
         i = 0
+        if self.size == 0:
+            print()
         for i in range(self.size):
             j = 0
             for j in range(self.size):
