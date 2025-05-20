@@ -14,8 +14,8 @@ class Square:
         """
         create an instance of object with these parameter
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -47,8 +47,10 @@ class Square:
         """
         Change the value of private attribut indirectly
         """
-        if not isinstance(value, tuple(int, int)):
-            TypeError("position must be a tuple of 2 positive integers")
+        if (not isinstance(value, tuple) or
+        	len(value) != 2 or
+            not all(isinstance(num, int) and num >= 0 for num in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
@@ -61,6 +63,9 @@ class Square:
         """
         That print square with '#' symbol and add space to position
         """
+        if self.size == 0:
+            print()
+            return
         for col in range(self.position[1]):
             print("")
         for i in range(self.size):
