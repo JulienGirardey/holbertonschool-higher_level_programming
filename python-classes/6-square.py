@@ -48,8 +48,8 @@ class Square:
         Change the value of private attribut indirectly
         """
         if (not isinstance(value, tuple) or
-        	len(value) != 2 or
-            not all(isinstance(num, int) and num >= 0 for num in value)):
+            len(value) != 2 or
+                not all(isinstance(num, int) and num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -57,7 +57,7 @@ class Square:
         """
         That returns the current square area
         """
-        return self.__size ** 2
+        return self.size ** 2
 
     def my_print(self):
         """
