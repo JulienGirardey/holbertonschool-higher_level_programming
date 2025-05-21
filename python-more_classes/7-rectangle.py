@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-6-rectangle
+7-rectangle
 
 That create a class that defines a rectangle
 """
@@ -11,6 +11,7 @@ class Rectangle:
     class rectangle to defines a rectangle
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -56,7 +57,7 @@ class Rectangle:
     def __str__(self):
         if self.height == 0 or self.width == 0:
             return ""
-        row = "#" * self.width
+        row = str(self.print_symbol) * self.width
         return "{}".format(row + "\n") * (self.height - 1) + row
 
     def __repr__(self):
