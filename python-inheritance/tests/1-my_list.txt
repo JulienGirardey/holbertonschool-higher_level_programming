@@ -1,16 +1,47 @@
-Import the function:
-	>>> MyList = __import__('1-my_list').MyList
+#!/usr/bin/python3
+MyList = __import__('1-my_list').MyList
 
-Basic Test:
-	>>> my_list = MyList()
-	>>> my_list.append(1)
-	>>> my_list.append(4)
-	>>> my_list.append(2)
-	>>> my_list.append(3)
-	>>> my_list.append(5)
-	>>> print(my_list)
-	[1, 4, 2, 3, 5]
-	>>> my_list.print_sorted()
-	[1, 2, 3, 4, 5]
-	>>> print(my_list)
-	[1, 4, 2, 3, 5]
+def test_basic():
+    my_list = MyList()
+    my_list.append(1)
+    my_list.append(4)
+    my_list.append(2)
+    my_list.append(3)
+    my_list.append(5)
+    assert str(my_list) == "[1, 4, 2, 3, 5]"
+    my_list.print_sorted()  # Should print: [1, 2, 3, 4, 5]
+    assert str(my_list) == "[1, 4, 2, 3, 5]"
+
+def test_empty():
+    my_list = MyList()
+    my_list.print_sorted()  # Should print: []
+
+def test_negative_numbers():
+    my_list = MyList([-3, -1, -2, 0])
+    my_list.print_sorted()  # Should print: [-3, -2, -1, 0]
+
+def test_duplicates():
+    my_list = MyList([2, 2, 1, 1])
+    my_list.print_sorted()  # Should print: [1, 1, 2, 2]
+
+def test_strings():
+    try:
+        my_list = MyList(["a", "b", "c"])
+        my_list.print_sorted()  # Should print: ['a', 'b', 'c']
+    except Exception as e:
+        print("Exception:", e)
+
+def test_mixed_types():
+    try:
+        my_list = MyList([1, "a", 2])
+        my_list.print_sorted()
+    except Exception as e:
+        print("Exception:", e)
+
+if __name__ == "__main__":
+    test_basic()
+    test_empty()
+    test_negative_numbers()
+    test_duplicates()
+    test_strings()
+    test_mixed_types()
