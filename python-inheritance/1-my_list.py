@@ -2,19 +2,20 @@
 """
 1-my_list
 
-creat class that inherit from list
+in this module we have the class MyList
+contains print_sorted method
 """
 
 
 class MyList(list):
     """
-    class MyList with a function
-    to sort a list
+    this is a class for a create square
+    and have print_sorted method to print it
     """
 
     def print_sorted(self):
         """
         that sort the actual list and
-        print it
+        print the list given
         """
         print(sorted(self))

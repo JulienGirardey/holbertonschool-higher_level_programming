@@ -2,7 +2,7 @@
 """
 is_same_class.py
 
-that return True if tje object is
+that return True if the object is
 exactly an instance of the specified calss
 """
 
