@@ -7,8 +7,8 @@ creat class that inherit from list
 
 
 class MyList(list):
-	"""
-	class MyList
-	"""
-	def print_sorted(self):
-		print(sorted(self))
+    """
+    class MyList
+    """
+    def print_sorted(self):
+        print(sorted(self))
