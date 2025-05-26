@@ -9,7 +9,10 @@ inherits form BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-
+    """
+    this is a class Rectangle contains
+    width and height of the rectangle
+    """
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)

@@ -8,7 +8,10 @@ this file contains the class Square
 
 
 class Square(Rectangle):
-
+    """
+    this is a class Square with
+    the size of square
+    """
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
