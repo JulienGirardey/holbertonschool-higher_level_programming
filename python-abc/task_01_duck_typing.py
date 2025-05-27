@@ -29,16 +29,14 @@ class Circle(Shape):
     area, returning the area of the circle and
     perimeter, returning the perimeter of the circle
     """
-    pi = math.pi
-
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        return self.pi * self.radius ** 2
+        return math.pi * self.radius ** 2
 
     def perimeter(self):
-        return 2 * self.pi * self.radius
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
