@@ -43,7 +43,7 @@ class Rectangle(Shape):
     """
     this class contains 2 abstractmethod:
     area, returning the area of the rectangle and
-    perimeter, returning the perimeter of the rectangle
+    perimeter, returning the perimeter of the rectangle.
     """
     def __init__(self, width, height):
         self.width = width
