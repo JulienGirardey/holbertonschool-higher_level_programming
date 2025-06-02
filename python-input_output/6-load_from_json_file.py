@@ -9,9 +9,9 @@ import json
 
 
 def load_from_json_file(filename):
-	"""
-	this function return an object
-	from a JSON file
-	"""
-	with open(filename, "r") as file:
-		return json.load(file)
+    """
+    this function return an object
+    from a JSON file
+    """
+    with open(filename, "r") as file:
+        return json.load(file)
