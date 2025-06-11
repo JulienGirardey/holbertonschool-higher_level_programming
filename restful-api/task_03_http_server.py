@@ -45,10 +45,10 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            return self.wfile.write(b"404 Not Found: Endpoint not found")
+            self.wfile.write(b"Endpoint not found")
 
 
-PORT = 8080
+PORT = 8000
 Handler = MyHandler
 
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
