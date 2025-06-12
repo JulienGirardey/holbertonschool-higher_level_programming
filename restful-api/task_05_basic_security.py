@@ -13,9 +13,9 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import get_jwt_identity
-from flask_jwt_extended import get_jwt
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import create_access_token
+from flask_jwt_extended import get_jwt
 
 
 app = Flask(__name__)
@@ -96,3 +96,7 @@ def admin_only():
     if claims.get("role") != "admin":
         return jsonify({"error": "Admin access required"}), 403
     return "Admin Access: Granted"
+
+
+if __name__ == "__main__":
+    app.run()
