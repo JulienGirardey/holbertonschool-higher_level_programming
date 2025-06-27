@@ -1,17 +1,8 @@
 #!/usr/bin/python3
 """
-6-model_state
-that creates the State class
-and the Base class
-for the database hbtn_0e_6_usa
-and creates the states table
-in the database
-using SQLAlchemy ORM
-This module defines the State class, which represents a state in the database.
-It inherits from Base and defines the table structure for states.
-It includes columns for id and name.
-It uses SQLAlchemy to define the database schema.
-It is used in conjunction with the model_city module to create a relationship
+This module defines the State class and the Base class for use with SQLAlchemy ORM.
+It creates the 'states' table in the database hbtn_0e_6_usa and is used in conjunction
+with model_city to create relationships between states and cities.
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
