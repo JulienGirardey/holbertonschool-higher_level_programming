@@ -1,14 +1,7 @@
 #!/usr/bin/python3
 """
-4-cities_by_state
-that lists all cities from the database hbtn_0e_4_usa
-and is ordered by cities.id (ascending)
-This script connects to a MySQL database using
-the credentials provided as command line arguments.
-It retrieves all cities along with their corresponding
-state names, ordered by city id.
-Usage: ./4-cities_by_state.py <mysql username>
-<mysql password> <database name>
+Script that lists all cities from the database hbtn_0e_4_usa
+Takes 3 arguments: mysql username, mysql password and database name
 """
 import MySQLdb
 import sys
