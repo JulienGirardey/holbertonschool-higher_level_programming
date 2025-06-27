@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines the State class and the Base class for use with SQLAlchemy ORM.
-It creates the 'states' table in the database hbtn_0e_6_usa and is used in conjunction
-with model_city to create relationships between states and cities.
+This module defines the State class which links to the MySQL table states
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
