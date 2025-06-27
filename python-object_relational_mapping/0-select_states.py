@@ -7,7 +7,7 @@ database hbtn_0e_0_usa
 """
 
 
-if __name__ == "__main__":	
+if __name__ == "__main__":
     db_connection = MySQLdb.connect(
         host="localhost",
         port=3306,
