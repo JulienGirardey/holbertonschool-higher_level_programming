@@ -19,7 +19,7 @@ if __name__ == "__main__":
 		db=sys.argv[3]
 	)
 	cursor = db_connection.cursor()
-	cursor.execute("SELECT * FROM states WHERE name LIKE 'n%' ORDER BY id;")
+	cursor.execute("SELECT * FROM states WHERE BINARY name 'n%' ORDER BY id;")
 	rows = cursor.fetchall()
 	for row in rows:
 		print(row)

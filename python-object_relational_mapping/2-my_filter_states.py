@@ -20,7 +20,7 @@ if __name__ == "__main__":
 	)
 	name_search = sys.argv[4]
 	cursor = db_connection.cursor()
-	query = ("SELECT * FROM states WHERE name = '{}' ORDER BY id".format(name_search))
+	query = ("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id".format(name_search))
 	cursor.execute(query)
 	rows = cursor.fetchall()
 	for row in rows:
