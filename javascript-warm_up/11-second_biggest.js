@@ -12,6 +12,9 @@ if (argv[3] === undefined) {
       seconde = one;
       one = Number(argv[i]);
     }
+    if (seconde < Number(argv[i]) && Number(argv[i]) < one) {
+      seconde = Number(argv[i]);
+    }
     i++;
   }
   console.log(seconde);
